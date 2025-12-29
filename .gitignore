@@ -30,19 +30,23 @@ buildNumber.properties
 mvnw
 mvnw.cmd
 
-##############################
-## Visual Studio Code
-##############################
+# OS / editor
+.DS_Store
+Thumbs.db
 .vscode/
+.idea/
+*.iml
 .code-workspace
 
-##############################
-## OS X
-##############################
-.DS_Store
-
-##############################
-## Miscellaneous
-##############################
+# Java / Maven
+**/target/
 *.log
-		
+
+# Eclipse artifacts
+.classpath
+.project
+.settings/
+
+# WSO2 runtime folders (if any get generated locally)
+**/wso2mi/
+**/runtime/
