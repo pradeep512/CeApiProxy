@@ -1,0 +1,10 @@
+---
+key: "CeProxyAPI-1.0.0"
+name : "CeProxyAPI"
+displayName : "CeProxyAPI"
+description: "CeProxyAPI"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/ce"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

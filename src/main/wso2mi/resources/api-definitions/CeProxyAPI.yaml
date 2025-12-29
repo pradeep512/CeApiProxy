@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: CeProxyAPI
+  description: API Definition of CeProxyAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/ce
+- url: https://localhost:8253/ce
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response
+  /students:
+    get:
+      responses:
+        default:
+          description: Default response
+  /projects:
+    get:
+      responses:
+        default:
+          description: Default response

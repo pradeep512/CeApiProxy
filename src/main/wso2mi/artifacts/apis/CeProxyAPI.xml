@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <api context="/ce" name="CeProxyAPI" xmlns="http://ws.apache.org/ns/synapse">
+        <resource methods="GET" uri-template="/">
+            <inSequence>
+            </inSequence>
+            <faultSequence>
+            </faultSequence>
+        </resource>
+    <resource methods="GET" uri-template="/students">
+    <inSequence>
+    <log category="INFO"   logMessageID="true" logFullPayload="false" >
+    <message>Incoming request to /ce/students
+</message>
+        <property name="REST_URL_POSTFIX" value="$axis2:REST_URL_POSTFIX"  />
+        <property name="HTTP_METHOD" value="$axis2:HTTP_METHOD"  />
+</log><call >
+    <endpoint key="StudentsEndpoint" />
+  
+</call><log category="INFO"   logMessageID="true" logFullPayload="false" >
+    <message>Backend response received: StudentsEndpoint</message>
+</log><respond /></inSequence>
+    <faultSequence>
+    </faultSequence>
+</resource><resource methods="GET" uri-template="/projects">
+    <inSequence>
+    <log category="INFO"   logMessageID="true" logFullPayload="false" >
+    <message>Incoming request to /ce/projects
+</message>
+        <property name="REST_URL_POSTFIX" value="$axis2:REST_URL_POSTFIX"  />
+        <property name="HTTP_METHOD" value="$axis2:HTTP_METHOD"  />
+</log><call >
+    <endpoint key="ProjectsEndpoint" />
+  
+</call><log category="INFO"   logMessageID="true" logFullPayload="false" >
+    <message>Backend response received: ProjectsEndpoint</message>
+</log><respond /></inSequence>
+    <faultSequence>
+    </faultSequence>
+</resource></api>
